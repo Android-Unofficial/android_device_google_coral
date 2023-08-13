@@ -79,11 +79,8 @@ WITH_GMS := true
 TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 
-# Sushi Boot Animation
-SUSHI_BOOTANIMATION  := 1440
-
-# Rice
-RICE_MAINTAINER := kernelpanix
+# Rising
+RISING_MAINTAINER := kernelpanix
 RISING_CHIPSET := "Snapdragon 855"
 TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
