@@ -65,6 +65,12 @@ BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1d84000.ufshc
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 
+TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"
+
+TARGET_KERNEL_CLANG_VERSION := playgroundtc
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 

@@ -38,6 +38,4 @@ COMMON_LUNCH_CHOICES := \
     derp_flame-eng \
     derp_coral-eng \
     cherish_flame-userdebug \
-    cherish_coral-userdebug \
-    cherish_flame-eng \
-    cherish_coral-eng
+    cherish_flame-userdebug
