@@ -70,7 +70,7 @@ endif
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_flame
+PRODUCT_NAME := lineage_flame
 PRODUCT_DEVICE := flame
 PRODUCT_MODEL := Pixel 4
 
@@ -80,8 +80,8 @@ TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 
 # Rising
-RISING_MAINTAINER := kernelpanix
-RISING_CHIPSET := "Snapdragon 855"
+RISING_MAINTAINER := KernelPanix
+RISING_CHIPSET := "SDM855"
 TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
 TARGET_HAS_UDFPS := true
