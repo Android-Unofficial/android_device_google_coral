@@ -44,7 +44,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 # Inherit some common PixelExperience stuff.
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := false
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/arrow/config/common.mk)
 
 $(call inherit-product, device/google/coral/device-flame.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
@@ -70,7 +70,7 @@ endif
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := lineage_flame
+PRODUCT_NAME := arrow_flame
 PRODUCT_DEVICE := flame
 PRODUCT_MODEL := Pixel 4
 
@@ -79,13 +79,9 @@ WITH_GMS := true
 TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 
-# Rising
-RISING_MAINTAINER := KernelPanix
-RISING_CHIPSET := "SDM855"
-TARGET_ENABLE_BLUR := true
+# ArrowsOS
+DEVICE_MAINTAINER := KernelPanix
 TARGET_FACE_UNLOCK_SUPPORTED := false
-TARGET_HAS_UDFPS := true
-TARGET_USE_PIXEL_FINGERPRINT := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=flame \
@@ -94,3 +90,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/flame/flame:13/TP1A.221005.002.B2/9382335:user/release-keys
 
 $(call inherit-product, vendor/google/flame/flame-vendor.mk)
+

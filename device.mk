@@ -287,6 +287,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24 \
     vendor.audio.offload.gapless.enabled=true \
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display \
+    vendor/qcom/opensource/commonsys/display
+
 # MaxxAudio effect and add rotation monitor
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.monitorRotation=true
