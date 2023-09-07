@@ -41,17 +41,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
-# Inherit some common PixelExperience stuff.
+# Inherit some common PixelExperience stuff
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := false
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
-$(call inherit-product, device/google/coral/device-flame.mk)
+$(call inherit-product, device/google/coral/device-coral.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
-$(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-flame.mk)
+$(call inherit-product-if-exists, vendor/google_devices/coral/prebuilts/device-vendor-coral.mk)
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml
+    $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 
 # Don't build super.img.
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -70,27 +70,18 @@ endif
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := lineage_flame
-PRODUCT_DEVICE := flame
-PRODUCT_MODEL := Pixel 4
+PRODUCT_NAME := aicp_coral
+PRODUCT_DEVICE := coral
+PRODUCT_MODEL := Pixel 4 XL
 
-# GMS
-WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
-
-# Rising
-RISING_MAINTAINER := KernelPanix
-RISING_CHIPSET := "SDM855"
-TARGET_ENABLE_BLUR := true
-TARGET_FACE_UNLOCK_SUPPORTED := false
-TARGET_HAS_UDFPS := true
-TARGET_USE_PIXEL_FINGERPRINT := false
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS="KernelPanix"
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_PRODUCT=flame \
-    PRIVATE_BUILD_DESC="flame-user 13 TP1A.221005.002.B2 9382335 release-keys"
+    TARGET_PRODUCT=coral \
+    PRIVATE_BUILD_DESC="coral-user 13 TP1A.221005.002.B2 9382335 release-keys"
 
-BUILD_FINGERPRINT := google/flame/flame:13/TP1A.221005.002.B2/9382335:user/release-keys
+BUILD_FINGERPRINT := google/coral/coral:13/TP1A.221005.002.B2/9382335:user/release-keys
 
-$(call inherit-product, vendor/google/flame/flame-vendor.mk)
+$(call inherit-product, vendor/google/coral/coral-vendor.mk)
