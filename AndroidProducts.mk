@@ -21,9 +21,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_coral.mk \
-    $(LOCAL_DIR)/lineage_flame.mk
+    $(LOCAL_DIR)/colt_coral.mk \
+    $(LOCAL_DIR)/colt_flame.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_coral-userdebug \
-    lineage_flame-userdebug
+    colt_coral-userdebug \
+    colt_flame-userdebug

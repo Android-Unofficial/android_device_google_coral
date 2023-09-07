@@ -163,6 +163,11 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_verifier
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display \
+    vendor/qcom/opensource/commonsys/display
+
 # Use Sdcardfs
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sys.sdcardfs=1
