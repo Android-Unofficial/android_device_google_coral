@@ -1,2 +1,5 @@
 #define smcinvoke device
 type smcinvoke_device, dev_type;
+
+# TurboAdapter
+type hal_turbo_adapter_hwservice, hwservice_manager_type;

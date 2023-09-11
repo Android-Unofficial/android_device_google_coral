@@ -45,7 +45,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_FACE_UNLOCK_SUPPORTED := false
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 $(call inherit-product, device/google/coral/device-flame.mk)
 $(call inherit-product-if-exists, vendor/google_devices/coral/proprietary/device-vendor.mk)
@@ -71,7 +71,7 @@ endif
 
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := google
-PRODUCT_NAME := aosp_flame
+PRODUCT_NAME := lineage_flame
 PRODUCT_DEVICE := flame
 PRODUCT_MODEL := Pixel 4
 

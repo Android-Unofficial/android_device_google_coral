@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/google/coral/aosp_coral.mk)
-PRODUCT_NAME := aosp_coral_hwasan
+$(call inherit-product, device/google/coral/lineage_flame.mk)
+PRODUCT_NAME := lineage_flame_hwasan
 
 # Add "hwaddress" as a global sanitizer if it's missing.
 ifeq ($(filter hwaddress,$(SANITIZE_TARGET)),)
